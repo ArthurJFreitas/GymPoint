@@ -1,17 +1,13 @@
 import { Router } from 'express';
-import Student from './app/models/Students';
+import StudentsController from './app/controllers/studentsController';
+import SessionsController from './app/controllers/sessionsController';
+import AuthMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
-routes.get('/', async (req, res) => {
-  const student = await Student.create({
-    name: 'Arthur Freitas',
-    email: 'arthur@gmail.com',
-    age: 20,
-    weigth: 80,
-    height: 1.85,
-  });
-  res.json(student);
-});
+routes.post('/students', AuthMiddleware, StudentsController.store);
+routes.put('/students', AuthMiddleware, StudentsController.update);
+
+routes.post('/sessions', SessionsController.store);
 
 export default routes;
