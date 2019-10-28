@@ -8,9 +8,9 @@ class StudentsController {
       email: Yup.string()
         .email()
         .required(),
-      age: Yup.number().required(),
-      height: Yup.number().required(),
-      weigth: Yup.numbet().required(),
+      age: Yup.string().required(),
+      height: Yup.string().required(),
+      weigth: Yup.string().required(),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -45,13 +45,13 @@ class StudentsController {
       email: Yup.string()
         .email()
         .required(),
-      age: Yup.number().required(),
-      height: Yup.number().required(),
-      weigth: Yup.numbet().required(),
+      age: Yup.string().required(),
+      height: Yup.string().required(),
+      weigth: Yup.string().required(),
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fai  led' });
+      return res.status(400).json({ error: 'Validation failed' });
     }
 
     const { name, email } = req.body;
