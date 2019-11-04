@@ -16,7 +16,7 @@
     <img alt="Codacy grade" src="https://api.codacy.com/project/badge/Grade/8c088bc5bc6748f0b6ad047a5c6e5cfc">
   </a>
   
-  <a href="https://github.com/jopcmelo/gostack-gympoint/stargazers">
+  <a href="https://github.com/ArthurJFreitas/GymPoint//stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/ArthurJFreitas/GymPoint?style=social">
   </a>
   
